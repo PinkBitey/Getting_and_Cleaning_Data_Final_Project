@@ -1,10 +1,23 @@
+This project uses the Human Activity Recognition Using Smartphones Dataset (HARUSD) (described below).
+
+The dataset includes "test" and "training" data. The run_analysis.r script uses the "base" and "dplyr" R libraries to create a tidy dataset by:
+
+(1) Download the HARUSD and unzip its contents;
+(2) Create dataframes from the "test" and "training" data;
+(3) Merge the dataframes;
+(4) Label the variables using the labels provided in the "feautures.txt" file of the HARUSD;
+(5) Create a dataframe from only the subject and activity variables and the variable for a mean or standard deviation of a human activity measurement;
+(6) Apply descriptive labels to the activity variable; and
+(7) Summarize the mean by each subject and activity. 
+
+
 ==================================================================
 Human Activity Recognition Using Smartphones Dataset
 Version 1.0
 ==================================================================
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 Smartlab - Non Linear Complex Systems Laboratory
-DITEN - Universit‡ degli Studi di Genova.
+DITEN - Universit√† degli Studi di Genova.
 Via Opera Pia 11A, I-16145, Genoa, Italy.
 activityrecognition@smartlab.ws
 www.smartlab.ws
