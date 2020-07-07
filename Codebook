@@ -1,0 +1,32 @@
+1 - Merges the training and the test sets to create one data set.
+
+  The script for this step downloads and unzips the zipped data set from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones.
+  
+  The unzipped dataset includes a README describing the dataset, labels for the features variables measured in the dataset, a set of training data, 
+  and a set of test data. In this initial step, our script:
+  
+    1 - loads the "dplyr" library
+    2 - sets variable names using the labels "subject" (for test subject variable), "activity" (for the types of actvities during which measurements were taken), 
+    and the measurements identifited in the "features.txt" file. 
+    3 - creates a "test" dataframe from the "subject_test.txt," "X_test.txt," and "Y_test.txt" files in the dataset and 
+    labels the variables using the object created in step 2.
+    4 - creates a "training" dataframe from the "subject_training.txt," "X_training.txt," and "Y_training.txt" files in the dataset and 
+    labels the variables using the object created in step 2.
+    5 - Merges the "test" and "training" dataframes.
+
+2 - Extracts only the measurements on the mean and standard deviation for each measurement.
+
+  In this step, our script uses the dplyr select function to create a datframe from only the subject, activity, mean, and std_dev variables
+
+3 - Uses descriptive activity names to name the activities in the data set
+
+  This step replaces the activity numbers with the labels from the "activity_labels.txt" file in the activity variable
+
+4 - Appropriately labels the data set with descriptive variable names.
+
+  This step was previously accomplished by appling the "features.txt" labels to the "test" and "training" dataframes
+
+5 - From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+  
+  This step groups the dataframe by subject and activity, then summarizes the average for each variable in those groups. This steps then extracts the
+  final tidy dataframe into a .csv file. 
